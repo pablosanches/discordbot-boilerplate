@@ -1,7 +1,7 @@
 /* eslint-disable */
 var config = { // NOTE: DO NOT LEAVE ANYTHING BLANK
 	// ALL settings are strings. Do NOT just use true or false, use these in strings such as 'true' or 'false'. This is due to how some code works when changing the settings
-        ownerID: '246652516249370624', // Your ID here
+        ownerID: '', // Your ID here
         token: 'ODcwNzE5MDA0Njc3OTI2OTEz.YQQ2Qw.2Ck_XN0X-xPSBXBmUmTI2dyo-F0', // Your bot token here
         status: 'online', // Bot status [online/idle/invisible/dnd]
         debug: 'false', // This is used to output some debug info if needed. The token will be in the console and other information could be in the console
