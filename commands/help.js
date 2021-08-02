@@ -39,7 +39,7 @@ exports.run = (client, message, args, level) => {
         let currentCategory = '';
         var embeds = [];
         embeds[0] = new Discord.MessageEmbed();
-        embeds[0].setTitle('Commands List \n (Use [prefix]help [command name] for details)');
+        embeds[0].setTitle(`Commands List \n (Use ${client.settings.get(message.guild.id).prefix}help [command name] for details)`);
 		embeds[0].setAuthor(client.user.username, client.user.avatarURL || client.user.defaultAvatarURL);
 
         const sorted = myCommands.sort((p, c) => p.help.category > c.help.category ? 1 : -1);
