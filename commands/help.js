@@ -4,15 +4,14 @@ exports.run = (client, message, args, level) => {
     let time = Date.now();
     if (args[0]) {
         let command = args[0];
-        let clientCommand = client.command.has(command) || client.aliases.has(command);
+        let clientCommand = client.commands.has(command) || client.aliases.has(command);
         
         if (clientCommand) {
-            command = clientCommand;
-
+            command = client.commands.get(command);
             var aliases = (command.conf.aliases.length > 0) ? command.conf.aliases : 'NONE';
             var newEmbed = new Discord.MessageEmbed()
                 .setTitle(`Command Help: ${command.help.name}`)
-                .addFiled('Description', command.help.description)
+                .addField('Description', command.help.description)
                 .addField('Category', command.help.category)
                 .addField('Usage', command.help.usage)
                 .addField('Enabled', command.help.enabled)
