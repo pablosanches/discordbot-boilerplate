@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
     let msg = args.join(' ');
     if (!msg) return message.reply('Need content for the embed');
 
-    const embed = new Discord.RichEmbed()
+    const embed = new Discord.MessageEmbed()
         .setDescription(msg)
         .setColor([114, 137, 217]);
     

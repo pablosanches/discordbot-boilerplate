@@ -10,7 +10,7 @@ exports.run = (client, message, args, level) => {
             command = clientCommand;
 
             var aliases = (command.conf.aliases.length > 0) ? command.conf.aliases : 'NONE';
-            var newEmbed = new Discord.richEmbed()
+            var newEmbed = new Discord.MessageEmbed()
                 .setTitle(`Command Help: ${command.help.name}`)
                 .addFiled('Description', command.help.description)
                 .addField('Category', command.help.category)
@@ -53,7 +53,7 @@ exports.run = (client, message, args, level) => {
 
             if (i % 18 === 0) {
                 embedNumber++;
-                embeds[embedNumber] = new Discord.RichEmbed();
+                embeds[embedNumber] = new Discord.MessageEmbed();
             }
 
             const category = c.help.category.toProperCase();

@@ -15,7 +15,7 @@ module.exports = (client, member) => {
         }
     }
 
-    const logWelcome = new Discord.RichEmbed()
+    const logWelcome = new Discord.MessageEmbed()
         .setColor('GREEN')
         .setTitle('New member')
         .addField('User tag', member.user.tag)

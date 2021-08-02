@@ -12,7 +12,7 @@ module.exports = (client, message) => {
                 content = '<<NOT CONTENT>>';
             }
 
-            const embed = new Discord.RichEmbed()
+            const embed = new Discord.MessageEmbed()
                 .setColor('RED')
                 .setTitle('Message deleted')
                 .addField('User', `${message.author.tag} (${message.author.id})`, true)
