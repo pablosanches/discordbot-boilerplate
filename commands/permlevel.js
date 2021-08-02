@@ -1,5 +1,5 @@
 exports.run = async (client, message, args, level) => {
-    message.reply(`Your permission level: ${level} (${client.permLevel[level]})`);
+    message.reply(`Your permission level: ${level} (${client.permLevels[level]})`);
 };
 
 exports.conf = {
